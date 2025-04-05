@@ -8,7 +8,7 @@ from sklearn.decomposition import PCA
 from io import BytesIO
 import base64
 
-st.set_page_config(layout="wide", page_title="Crime Data Dashboard 🚔")
+st.set_page_config(layout="wide", page_title="IndiaCrimetrics 🚔")
 
 # --------------------------------------
 # 🧼 Data Cleaning Function
@@ -46,7 +46,7 @@ if uploaded_file:
     df_raw = pd.read_excel(uploaded_file)
     df = preprocess_crime_data(df_raw)
 
-    st.title("🔍 Crime Data Dashboard")
+    st.title("🔍 IndiaCrimetrics")
     st.dataframe(df.head(), use_container_width=True)
 
     # --------------------------------------
@@ -204,5 +204,5 @@ if uploaded_file:
     )
 
 else:
-    st.title("📊 Crime Data Dashboard")
+    st.title("📊 IndiaCrimetrics")
     st.info("Please upload a valid Excel file to begin.")
